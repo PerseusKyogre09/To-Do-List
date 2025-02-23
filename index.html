@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="themes/light.css" id="theme-link">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 To-Do List</h1>
+        
+        <div class="controls">
+            <input type="text" id="taskInput" placeholder="Enter new task...">
+            <select id="priority">
+                <option value="high">🔥 High</option>
+                <option value="medium">⚡ Medium</option>
+                <option value="low">✅ Low</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+            <button id="toggleTheme">🌙 Dark Mode</button>
+        </div>
+
+        <ul id="taskList"></ul>
+        <button id="undoBtn" onclick="undoDelete()">Undo Last Delete</button>
+
+        <h2>⏳ Pomodoro Timer</h2>
+        <div id="pomodoro">
+            <span id="timer">25:00</span>
+            <button onclick="startPomodoro()">▶ Start</button>
+            <button onclick="resetPomodoro()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="pomodoro.js"></script>
+    <script src="assets/confetti.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
